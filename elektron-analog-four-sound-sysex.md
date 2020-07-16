@@ -12,11 +12,11 @@
 | Parameter | Short | Addr | Len | Def | Min | Max | Comment |
 |-|-|-|-|-|-|-|-|
 | Program Number | | 09 | 1 | 00 | 00 | ff | 256 Sounds |
-| Tags | | 16 | 1 | 00 | 00 | 20 | 4 [Tags](#tags) (bit field) |
-| Tags | | 18 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
-| Tags | | 19 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
-| Tags | | 20 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
-| Tags | | 21 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
+| Tags | | 16 | 1 | 00 | 00 | 3c | 4 [Tags](#tags) (bit field) |
+| Tags | | 18 | 1 | 00 | 00 | 7f | 7 [Tags](#tags) (bit field) |
+| Tags | | 19 | 1 | 00 | 00 | 7f | 7 [Tags](#tags) (bit field) |
+| Tags | | 20 | 1 | 00 | 00 | 7f | 7 [Tags](#tags) (bit field) |
+| Tags | | 21 | 1 | 00 | 00 | 7f | 7 [Tags](#tags) (bit field) |
 
 
 #### Footer
