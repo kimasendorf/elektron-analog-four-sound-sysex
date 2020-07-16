@@ -1,5 +1,6 @@
 # Elektron A4 Sound SysEx
 
+
 #### Meta
 
 * Header -> 0-23 -> 24 Bytes
@@ -11,6 +12,11 @@
 | Parameter | Short | Addr | Len | Def | Min | Max | Comment |
 |-|-|-|-|-|-|-|-|
 | Program Number | | 09 | 1 | 00 | 00 | ff | 256 Sounds |
+| Tags | | 16 | 1 | 00 | 00 | 20 | 4 [Tags](#tags) (bit field) |
+| Tags | | 18 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
+| Tags | | 19 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
+| Tags | | 20 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
+| Tags | | 21 | 1 | 00 | 00 | 40 | 7 [Tags](#tags) (bit field) |
 
 
 #### Footer
@@ -148,11 +154,11 @@
 | Sustain | SUS | 173 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Release | REL | 180 | 1 | 08 | 00 | 7f | 0 to 127 (127 = Infinite) |
 | Gate Length | LEN | 193 | 1 | 00 | 00 | 7f | Off, 0 to 128 (Exponential) |
-| Route 1 | DST | 198 | 1 | 0c | 00 | 7f | *Routing Ids* |
+| Route 1 | DST | 198 | 1 | 0c | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 1 Depth | DEP | 207 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 1 Depth Intermediate Step | DEP | 202 | 1 | 00 | 00 | 02 | 00 = 0; 02 = +1 |
 | Route 1 Depth Decimal | DEP | 208 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 200 | 1 | 0d | 00 | 7f | *Routing Ids* |
+| Route 2 | DST | 200 | 1 | 0d | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 2 Depth | DEP | 209 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 2 Depth Intermediate Step | DEP | 210 | 1 | 00 | 00 | 40 | 00 = 0; 40 = +1 |
 | Route 2 Depth Decimal | DEP | 211 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
@@ -168,11 +174,11 @@
 | Sustain | SUS | 175 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Release | REL | 182 | 1 | 08 | 00 | 7f | 0 to 127 (127 = Infinite) |
 | Gate Length | LEN | 196 | 1 | 00 | 00 | 7f | Off, 0 to 128 (Exponential) |
-| Route 1 | DST | 203 | 1 | 4c | 00 | 7f | *Routing Ids* |
+| Route 1 | DST | 203 | 1 | 4c | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 1 Depth | DEP | 212 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 1 Depth Intermediate Step | DEP | 210 | 1 | 00 | 00 | 10 | 00 = 0; 10 = +1 |
 | Route 1 Depth Decimal | DEP | 213 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 205 | 1 | 0d | 00 | 7f | *Routing Ids* |
+| Route 2 | DST | 205 | 1 | 0d | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 2 Depth | DEP | 214 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 2 Depth Intermediate Step | DEP | 210 | 1 | 00 | 00 | 04 | 00 = 0; 04 = +1 |
 | Route 2 Depth Decimal | DEP | 215 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
@@ -188,11 +194,11 @@
 | Fade | FAD | 225 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Speed | SPD | 216 | 1 | 70 | 00 | 7f | 0 to 127 |
 | Multiplier | MUL | 221 | 1 | 04 | 00 | 23 | 3 x 12 Options |
-| Route 1 | DST | 244 | 1 | 22 | 00 | 7f | *Routing Ids* |
+| Route 1 | DST | 244 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 1 Depth | DEP | 253 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 1 Depth Intermediate Step | DEP | 250 | 1 | 00 | 00 | 08 | 00 = 0; 08 = +1 |
 | Route 1 Depth Decimal | DEP | 254 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 246 | 1 | 27 | 00 | 7f | *Routing Ids* |
+| Route 2 | DST | 246 | 1 | 27 | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 2 Depth | DEP | 255 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 2 Depth Intermediate Step | DEP | 250 | 1 | 00 | 00 | 02 | 00 = 0; 02 = +1 |
 | Route 2 Depth Decimal | DEP | 256 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
@@ -208,17 +214,17 @@
 | Fade | FAD | 228 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Speed | SPD | 219 | 1 | 60 | 00 | 7f | 0 to 127 |
 | Multiplier | MUL | 223 | 1 | 04 | 00 | 23 | 3 x 12 Options |
-| Route 1 | DST | 248 | 1 | 22 | 00 | 7f | *Routing Ids* |
+| Route 1 | DST | 248 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 1 Depth | DEP | 257 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 1 Depth Intermediate Step | DEP | 258 | 1 | 00 | 00 | 40 | 00 = 0; 40 = +1 |
 | Route 1 Depth Decimal | DEP | 259 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 251 | 1 | 27 | 00 | 7f | *Routing Ids* |
+| Route 2 | DST | 251 | 1 | 27 | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Route 2 Depth | DEP | 260 | 1 | 40 | 00 | 7f | -128 to +127 |
 | Route 2 Depth Intermediate Step | DEP | 258 | 1 | 00 | 00 | 10 | 00 = 0; 10 = +1 |
 | Route 2 Depth Decimal | DEP | 261 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
 
 
-#### Routing Ids (Destinations)
+#### Routing Destinations
 
 | Object | Parameter | Hex |
 |-|-|-|
@@ -308,6 +314,44 @@
 | Lfo 1 | Depth B | 5d |
 
 
+#### Tags
+
+| Tag | Hex | Comment |
+|-|-|-|
+| Bass | 01 | Byte 21 |
+| Lead | 02 | Byte 21 |
+| Pad | 04 | Byte 21 |
+| Texture | 08 | Byte 21 |
+| Chord | 10 | Byte 21 |
+| Keys | 20 | Byte 21 |
+| Brass | 40 | Byte 21 |
+| Strings | 04 | Byte 16 |
+| Transient | 01 | Byte 20 |
+| Sound FX | 02 | Byte 20 |
+| Kick | 04 | Byte 20 |
+| Snare | 08 | Byte 20 |
+| Hihat | 10 | Byte 20 |
+| Percussion | 20 | Byte 20 |
+| Atmosphere | 40 | Byte 20 |
+| Evolving | 08 | Byte 16 |
+| Noisy | 01 | Byte 19 |
+| Glitch | 02 | Byte 19 |
+| Hard | 04 | Byte 19 |
+| Soft | 08 | Byte 19 |
+| Expressive | 10 | Byte 19 |
+| Deep | 20 | Byte 19 |
+| Dark | 40 | Byte 19 |
+| Bright | 10 | Byte 16 |
+| Vintage | 01 | Byte 18 |
+| Acid | 02 | Byte 18 |
+| Epic | 04 | Byte 18 |
+| Fail | 08 | Byte 18 |
+| Tempo Sync | 10 | Byte 18 |
+| Input | 20 | Byte 18 |
+| Mine | 40 | Byte 18 |
+| Favourite | 20 | Byte 16 |
+
+
 #### Letters
 
 | Letter | Hex |
@@ -359,7 +403,3 @@
 | 8 | 38 |
 | 9 | 39 |
 | ~ | 7e |
-
-
-
-
