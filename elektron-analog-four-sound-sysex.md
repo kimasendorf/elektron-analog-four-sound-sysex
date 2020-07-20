@@ -104,8 +104,8 @@ OS Version: OS 1.40A
 | Parameter | Short | Addr | Len | Def | Min | Max | Comment |
 |-|-|-|-|-|-|-|-|
 | Sync Amount | SNC | 102 | 1 | 7f | 00 | 7f | 0 to 127 |
-| OSC Retrig | TRG | 109 | 1 | 00 | 00 | 01 | Off/On |
-| OSC Drift | | 278 | 1 | 01 | 00 | 01 | Off/On (Sound Menu) |
+| Osc Retrig | TRG | 109 | 1 | 00 | 00 | 01 | Off/On |
+| Osc Drift | | 278 | 1 | 01 | 00 | 01 | Off/On (Sound Menu) |
 | Mode | SMD | 100 | 1 | 00 | 00 | 03 | Off/1->2/2->1/Metal |
 
 
@@ -160,14 +160,14 @@ OS Version: OS 1.40A
 | Sustain | SUS | 171 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Release | REL | 178 | 1 | 08 | 00 | 7f | 0 to 127 (127 = Infinite) |
 | Gate Length | LEN | 191 | 1 | 00 | 00 | 7f | Off, 0 to 128 (Exponential) |
-| Route 1 | DST | 196 | 1 | 0c | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 1 Depth | DEP | 205 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 1 Depth Intermediate Step | DEP | 200 | 1 | 00 | 00 | 02 | 00 = 0; 02 = +1 |
-| Route 1 Depth Decimal | DEP | 206 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 198 | 1 | 0d | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 2 Depth | DEP | 207 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 2 Depth Intermediate Step | DEP | 208 | 1 | 00 | 00 | 40 | 00 = 0; 40 = +1 |
-| Route 2 Depth Decimal | DEP | 209 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination A | DST | 196 | 1 | 0c | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth A | DEP | 205 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth A Intermediate Step | DEP | 200 | 1 | 00 | 00 | 02 | 00 = 0; 02 = +1 |
+| Depth A Decimal | DEP | 206 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination B | DST | 198 | 1 | 0d | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth B | DEP | 207 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth B Intermediate Step | DEP | 208 | 1 | 00 | 00 | 40 | 00 = 0; 40 = +1 |
+| Depth B Decimal | DEP | 209 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
 
 
 #### Envelope 2 (User)
@@ -180,14 +180,14 @@ OS Version: OS 1.40A
 | Sustain | SUS | 173 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Release | REL | 180 | 1 | 08 | 00 | 7f | 0 to 127 (127 = Infinite) |
 | Gate Length | LEN | 194 | 1 | 00 | 00 | 7f | Off, 0 to 128 (Exponential) |
-| Route 1 | DST | 201 | 1 | 4c | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 1 Depth | DEP | 210 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 1 Depth Intermediate Step | DEP | 208 | 1 | 00 | 00 | 10 | 00 = 0; 10 = +1 |
-| Route 1 Depth Decimal | DEP | 211 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 203 | 1 | 0d | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 2 Depth | DEP | 212 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 2 Depth Intermediate Step | DEP | 208 | 1 | 00 | 00 | 04 | 00 = 0; 04 = +1 |
-| Route 2 Depth Decimal | DEP | 213 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination A | DST | 201 | 1 | 4c | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth A | DEP | 210 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth A Intermediate Step | DEP | 208 | 1 | 00 | 00 | 10 | 00 = 0; 10 = +1 |
+| Depth A Decimal | DEP | 211 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination B | DST | 203 | 1 | 0d | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth B | DEP | 212 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth B Intermediate Step | DEP | 208 | 1 | 00 | 00 | 04 | 00 = 0; 04 = +1 |
+| Depth B Decimal | DEP | 213 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
 
 
 #### LFO 1
@@ -200,14 +200,14 @@ OS Version: OS 1.40A
 | Fade | FAD | 223 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Speed | SPD | 214 | 1 | 70 | 00 | 7f | 0 to 127 |
 | Multiplier | MUL | 219 | 1 | 04 | 00 | 23 | 3 x 12 [LFO Multipliers](#lfo-multipliers) |
-| Route 1 | DST | 242 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 1 Depth | DEP | 251 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 1 Depth Intermediate Step | DEP | 248 | 1 | 00 | 00 | 08 | 00 = 0; 08 = +1 |
-| Route 1 Depth Decimal | DEP | 252 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 244 | 1 | 27 | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 2 Depth | DEP | 253 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 2 Depth Intermediate Step | DEP | 248 | 1 | 00 | 00 | 02 | 00 = 0; 02 = +1 |
-| Route 2 Depth Decimal | DEP | 254 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination A | DST | 242 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth A | DEP | 251 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth A Intermediate Step | DEP | 248 | 1 | 00 | 00 | 08 | 00 = 0; 08 = +1 |
+| Depth A Decimal | DEP | 252 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination B | DST | 244 | 1 | 27 | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth B | DEP | 253 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth B Intermediate Step | DEP | 248 | 1 | 00 | 00 | 02 | 00 = 0; 02 = +1 |
+| Depth B Decimal | DEP | 254 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
 
 
 #### LFO 2
@@ -220,14 +220,14 @@ OS Version: OS 1.40A
 | Fade | FAD | 226 | 1 | 40 | 00 | 7f | 0 to 127 |
 | Speed | SPD | 217 | 1 | 60 | 00 | 7f | 0 to 127 |
 | Multiplier | MUL | 221 | 1 | 04 | 00 | 23 | 3 x 12 [LFO Multipliers](#lfo-multipliers) |
-| Route 1 | DST | 246 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 1 Depth | DEP | 255 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 1 Depth Intermediate Step | DEP | 256 | 1 | 00 | 00 | 40 | 00 = 0; 40 = +1 |
-| Route 1 Depth Decimal | DEP | 257 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
-| Route 2 | DST | 249 | 1 | 27 | 00 | 7f | [Routing Destinations](#routing-destinations) |
-| Route 2 Depth | DEP | 258 | 1 | 40 | 00 | 7f | -128 to +127 |
-| Route 2 Depth Intermediate Step | DEP | 256 | 1 | 00 | 00 | 10 | 00 = 0; 10 = +1 |
-| Route 2 Depth Decimal | DEP | 259 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination A | DST | 246 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth A | DEP | 255 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth A Intermediate Step | DEP | 256 | 1 | 00 | 00 | 40 | 00 = 0; 40 = +1 |
+| Depth A Decimal | DEP | 257 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
+| Destination B | DST | 249 | 1 | 27 | 00 | 7f | [Routing Destinations](#routing-destinations) |
+| Depth B | DEP | 258 | 1 | 40 | 00 | 7f | -128 to +127 |
+| Depth B Intermediate Step | DEP | 256 | 1 | 00 | 00 | 10 | 00 = 0; 10 = +1 |
+| Depth B Decimal | DEP | 259 | 1 | 00 | 00 | 7e | 0.00 to 0.99 |
 
 
 ## Options
@@ -360,88 +360,88 @@ OS Version: OS 1.40A
 |-|-|-|
 | | None | 60 |
 |-|-|-|
-| Osc 1 | Pitch Mod | 12 |
-| Osc 1 | Freq Mod | 61 |
-| Osc 1 | Linear Detune | 02 |
-| Osc 1 | Keytrack | 04 |
-| Osc 1 | Level | 06 |
-| Osc 1 | Waveform | 08 |
-| Osc 1 | Sub Oscillator | 0a |
-| Osc 1 | Pulse Width | 0c |
-| Osc 1 | PWM Speed | 0e |
-| Osc 1 | PWM Depth | 10 |
+| OSC1 | Pitch Mod | 12 |
+| OSC1 | Freq Mod | 61 |
+| OSC1 | Linear Detune | 02 |
+| OSC1 | Keytrack | 04 |
+| OSC1 | Level | 06 |
+| OSC1 | Waveform | 08 |
+| OSC1 | Sub Oscillator | 0a |
+| OSC1 | Pulse Width | 0c |
+| OSC1 | PWM Speed | 0e |
+| OSC1 | PWM Depth | 10 |
+| OSC1 | Osc1 AM | 18 |
 |-|-|-|
-| Osc 2 | Pitch Mod | 13 |
-| Osc 2 | Freq Mod | 62 |
-| Osc 2 | Linear Detune | 03 |
-| Osc 2 | Keytrack | 05 |
-| Osc 2 | Level | 07 |
-| Osc 2 | Waveform | 09 |
-| Osc 2 | Sub Oscillator | 0b |
-| Osc 2 | Pulse Width | 0d |
-| Osc 2 | PWM Speed | 0f |
-| Osc 2 | PWM Depth | 11 |
+| OSC2 | Pitch Mod | 13 |
+| OSC2 | Freq Mod | 62 |
+| OSC2 | Linear Detune | 03 |
+| OSC2 | Keytrack | 05 |
+| OSC2 | Level | 07 |
+| OSC2 | Waveform | 09 |
+| OSC2 | Sub Oscillator | 0b |
+| OSC2 | Pulse Width | 0d |
+| OSC2 | PWM Speed | 0f |
+| OSC2 | PWM Depth | 11 |
+| OSC2 | Osc2 AM | 19 |
 |-|-|-|
-| Osc | Osc1+2 Pitch Mod | 14 |
-| Osc | Osc1+2 Freq Mod | 63 |
-| Osc | Osc1 AM | 18 |
-| Osc | Osc1+2 Sync Mode | 1a |
-| Osc | Osc1+2 Sync Amount | 1b |
-| Osc | Osc1+2 Bend Depth | 1c |
-| Osc | Osc1+2 Note Slide Time | 1d |
-| Osc | Osc2 AM | 19 |
-| Osc | Osc1+2 Vibrato Fade | 1f |
-| Osc | Osc1+2 Vibrato Speed | 20 |
-| Osc | Osc1+2 Vibrato Depth | 21 |
+| OSCX | Pitch Mod | 14 |
+| OSCX | Freq Mod | 63 |
+| OSCX | Sync Mode | 1a |
+| OSCX | Sync Amount | 1b |
+| OSCX | Bend Depth | 1c |
+| OSCX | Note Slide Time | 1d |
+| OSCX | Vibrato Fade | 1f |
+| OSCX | Vibrato Speed | 20 |
+| OSCX | Vibrato Depth | 21 |
 |-|-|-|
-| Noise | Sample and Hold | 15 |
-| Noise | Color | 64 |
-| Noise | Fade | 16 |
-| Noise | Level | 17 |
+| NOISE | Sample and Hold | 15 |
+| NOISE | Color | 64 |
+| NOISE | Fade | 16 |
+| NOISE | Level | 17 |
 |-|-|-|
-| Amp | EnvA Attack | 35 |
-| Amp | EnvA Decay | 38 |
-| Amp | EnvA Sustain | 3b |
-| Amp | EnvA Release | 3e |
-| Amp | EnvA Shape | 41 |
-| Amp | Chorus Send | 2d |
-| Amp | Delay Send | 2e |
-| Amp | Reverb Send | 2f |
-| Amp | Pan | 30 |
-| Amp | Volume | 31 |
-| Amp | Accent Level | 32 |
+| FILTER | F1 Frequency | 22 |
+| FILTER | F1 Resonance | 23 |
+| FILTER | F1 Overdrive | 24 |
+| FILTER | F1 EnvF Depth | 26 |
+| FILTER | F2 Frequency | 27 |
+| FILTER | F2 Resonance | 28 |
+| FILTER | F2 EnvF Depth | 2b |
+| FILTER | F1+F2 Freq | 2c |
 |-|-|-|
-| Env Filter | Attack | 33 |
-| Env Filter | Decay | 36 |
-| Env Filter | Sustain | 39 |
-| Env Filter | Release | 3c |
-| Env Filter | Shape | 3f |
-| Env Filter | Depth A | 48 |
-| Env Filter | Depth B | 49 |
+| AMP | EnvA Attack | 35 |
+| AMP | EnvA Decay | 38 |
+| AMP | EnvA Sustain | 3b |
+| AMP | EnvA Release | 3e |
+| AMP | EnvA Shape | 41 |
+| AMP | Chorus Send | 2d |
+| AMP | Delay Send | 2e |
+| AMP | Reverb Send | 2f |
+| AMP | Pan | 30 |
+| AMP | Volume | 31 |
+| AMP | Accent Level | 32 |
 |-|-|-|
-| Env User | Attack | 34 |
-| Env User | Decay | 37 |
-| Env User | Sustain | 3a |
-| Env User | Release | 3d |
-| Env User | Shape | 40 |
-| Env User | Depth A | 4a |
-| Env User | Depth B | 4b |
+| ENVF | Attack | 33 |
+| ENVF | Decay | 36 |
+| ENVF | Sustain | 39 |
+| ENVF | Release | 3c |
+| ENVF | Shape | 3f |
+| ENVF | Depth A | 48 |
+| ENVF | Depth B | 49 |
 |-|-|-|
-| Filter | F1 Frequency | 22 |
-| Filter | F1 Resonance | 23 |
-| Filter | F1 Overdrive | 24 |
-| Filter | F1 EnvF Depth | 26 |
-| Filter | F2 Frequency | 27 |
-| Filter | F2 Resonance | 28 |
-| Filter | F2 EnvF Depth | 2b |
-| Filter | F1+F2 Freq | 2c |
+| ENV2 | Attack | 34 |
+| ENV2 | Decay | 37 |
+| ENV2 | Sustain | 3a |
+| ENV2 | Release | 3d |
+| ENV2 | Shape | 40 |
+| ENV2 | Depth A | 4a |
+| ENV2 | Depth B | 4b |
 |-|-|-|
-| Lfo 1 | Speed | 4c |
-| Lfo 1 | Multiplier | 4e |
-| Lfo 1 | Fade In/Out | 50 |
-| Lfo 1 | Start Phase | 52 |
-| Lfo 1 | Depth A | 5c |
-| Lfo 1 | Depth B | 5d |
+| LFO1 | Speed | 4c |
+| LFO1 | Multiplier | 4e |
+| LFO1 | Fade In/Out | 50 |
+| LFO1 | Start Phase | 52 |
+| LFO1 | Depth A | 5c |
+| LFO1 | Depth B | 5d |
 
 
 #### Tags
