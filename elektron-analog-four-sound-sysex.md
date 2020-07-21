@@ -2,8 +2,6 @@
 
 OS Version: OS 1.40A
 
-**INFO:** Apparently there is an export bug in the OS 1.40A. Byte 2 + 3 are missing. Exported patches can't be imported again.
-
 
 #### Meta
 
@@ -17,8 +15,9 @@ OS Version: OS 1.40A
 
 | Parameter | Short | Addr | Len | Def | Min | Max | Comment |
 |-|-|-|-|-|-|-|-|
+| Start Marker | | 0 | 1 | f0 | | | |
 | Type | | 1 | 2 | 00 20 | | | AF |
-| Program Number | | 07 | 1 | 00 | 00 | ff | 256 Sounds |
+| Program Number | | 7 | 1 | 00 | 00 | ff | 256 Sounds |
 | Tags | | 18 | 1 | 00 | 00 | 3c | 4 [Tags](#tags) (bit field) |
 | Tags | | 20 | 1 | 00 | 00 | 7f | 7 [Tags](#tags) (bit field) |
 | Tags | | 21 | 1 | 00 | 00 | 7f | 7 [Tags](#tags) (bit field) |
