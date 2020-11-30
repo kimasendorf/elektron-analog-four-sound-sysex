@@ -448,38 +448,38 @@ OS Version: OS 1.40A
 
 | Tag | Hex | Comment |
 |-|-|-|
-| Bass | 01 | Byte 21 |
-| Lead | 02 | Byte 21 |
-| Pad | 04 | Byte 21 |
-| Texture | 08 | Byte 21 |
-| Chord | 10 | Byte 21 |
-| Keys | 20 | Byte 21 |
-| Brass | 40 | Byte 21 |
-| Strings | 04 | Byte 16 |
-| Transient | 01 | Byte 20 |
-| Sound FX | 02 | Byte 20 |
-| Kick | 04 | Byte 20 |
-| Snare | 08 | Byte 20 |
-| Hihat | 10 | Byte 20 |
-| Percussion | 20 | Byte 20 |
-| Atmosphere | 40 | Byte 20 |
-| Evolving | 08 | Byte 16 |
-| Noisy | 01 | Byte 19 |
-| Glitch | 02 | Byte 19 |
-| Hard | 04 | Byte 19 |
-| Soft | 08 | Byte 19 |
-| Expressive | 10 | Byte 19 |
-| Deep | 20 | Byte 19 |
-| Dark | 40 | Byte 19 |
-| Bright | 10 | Byte 16 |
-| Vintage | 01 | Byte 18 |
-| Acid | 02 | Byte 18 |
-| Epic | 04 | Byte 18 |
-| Fail | 08 | Byte 18 |
-| Tempo Sync | 10 | Byte 18 |
-| Input | 20 | Byte 18 |
-| Mine | 40 | Byte 18 |
-| Favourite | 20 | Byte 16 |
+| Bass | 01 | Byte 23 |
+| Lead | 02 | Byte 23 |
+| Pad | 04 | Byte 23 |
+| Texture | 08 | Byte 23 |
+| Chord | 10 | Byte 23 |
+| Keys | 20 | Byte 23 |
+| Brass | 40 | Byte 23 |
+| Strings | 04 | Byte 18 |
+| Transient | 01 | Byte 22 |
+| Sound FX | 02 | Byte 22 |
+| Kick | 04 | Byte 22 |
+| Snare | 08 | Byte 22 |
+| Hihat | 10 | Byte 22 |
+| Percussion | 20 | Byte 22 |
+| Atmosphere | 40 | Byte 22 |
+| Evolving | 08 | Byte 18 |
+| Noisy | 01 | Byte 21 |
+| Glitch | 02 | Byte 21 |
+| Hard | 04 | Byte 21 |
+| Soft | 08 | Byte 21 |
+| Expressive | 10 | Byte 21 |
+| Deep | 20 | Byte 21 |
+| Dark | 40 | Byte 21 |
+| Bright | 10 | Byte 18 |
+| Vintage | 01 | Byte 20 |
+| Acid | 02 | Byte 20 |
+| Epic | 04 | Byte 20 |
+| Fail | 08 | Byte 20 |
+| Tempo Sync | 10 | Byte 20 |
+| Input | 20 | Byte 20 |
+| Mine | 40 | Byte 20 |
+| Favourite | 20 | Byte 18 |
 
 
 #### Letters
