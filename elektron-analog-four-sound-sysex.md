@@ -197,8 +197,8 @@ OS Version: OS 1.40A
 | Shape | SHP | 239 | 1 | 00 | 00 | 06 | 7 [LFO Shapes](#lfo-shapes) |
 | Mode | MOD | 235 | 1 | 00 | 00 | 04 | 5 [LFO Modes](#lfo-modes) |
 | Start Phase | SPH | 230 | 1 | 00 | 00 | 7f | 0 to 127 |
-| Fade | FAD | 225 | 1 | 40 | 00 | 7f | 0 to 127 |
-| Speed | SPD | 216 | 1 | 70 | 00 | 7f | 0 to 127 |
+| Fade | FAD | 225 | 1 | 40 | 00 | 7f | -64 to 63 |
+| Speed | SPD | 216 | 1 | 70 | 00 | 7f | -64 to 63 |
 | Multiplier | MUL | 221 | 1 | 04 | 00 | 23 | 3 x 12 [LFO Multipliers](#lfo-multipliers) |
 | Destination A | DST | 244 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Depth A | DEP | 253 | 1 | 40 | 00 | 7f | -128 to +127 |
@@ -217,8 +217,8 @@ OS Version: OS 1.40A
 | Shape | SHP | 241 | 1 | 00 | 00 | 06 | 7 [LFO Shapes](#lfo-shapes) |
 | Mode | MOD | 237 | 1 | 00 | 00 | 04 | 5 [LFO Modes](#lfo-modes) |
 | Start Phase | SPH | 232 | 1 | 00 | 00 | 7f | 0 to 127 |
-| Fade | FAD | 228 | 1 | 40 | 00 | 7f | 0 to 127 |
-| Speed | SPD | 219 | 1 | 60 | 00 | 7f | 0 to 127 |
+| Fade | FAD | 228 | 1 | 40 | 00 | 7f | -64 to 63 |
+| Speed | SPD | 219 | 1 | 60 | 00 | 7f | -64 to 63 |
 | Multiplier | MUL | 223 | 1 | 04 | 00 | 23 | 3 x 12 [LFO Multipliers](#lfo-multipliers) |
 | Destination A | DST | 248 | 1 | 22 | 00 | 7f | [Routing Destinations](#routing-destinations) |
 | Depth A | DEP | 257 | 1 | 40 | 00 | 7f | -128 to +127 |
